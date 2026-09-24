@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.page-wrapper {
+    background-color: black;
+    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #f5f5f5;
+    overflow-y: visible;
+    overflow-x: hidden;
+    position: relative;
+    flex: 1;
+    min-height: fit-content;
+    padding-bottom: 40px;
+}
+
+.header {
+    background-color: #1162a4;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-title {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px 15px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.ticket-card {
+    background-color: #bf0007;
+    border-radius: 8px;
+    padding: 25px;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.timer {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.card-value {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.quantity-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px 0;
+}
+
+.quantity-input {
+    width: 80px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    background-color: white;
+    color: #bf0007;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.date-input-wrapper {
+    position: relative;
+}
+
+.date-input, .text-input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+    color: #333;
+}
+
+.text-input {
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #1162a4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #0d4f87;
+}
+
+.buy-button:active {
+    transform: scale(0.98);
+}

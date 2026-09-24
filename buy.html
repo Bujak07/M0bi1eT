@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>moBiLet - Skasuj bilet</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/buy.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="page-wrapper">
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="window.location.href='tickets.html'">← Wróć</button>
+            <img src="images/logo-white.png" class="header-logo" alt="moBiLet">
+        </div>
+        <p class="header-title">Skasuj bilet</p>
+    </div>
+
+    <div class="container">
+        <div class="ticket-card">
+            <div class="timer">38 s</div>
+            
+            <p class="card-label">Rodzaj biletów</p>
+            <p class="card-value" id="ticketType">Olkusz ZKGKM</p>
+            
+            <p class="card-label">bilet czasowy</p>
+            
+            <p class="card-value" id="ticketName">Miesięczny wsz.linie U</p>
+            
+            <!-- Pole dla numeru linii (jednorazowe) -->
+            <div id="lineNumberSection" style="display: none;">
+                <p class="card-label">Numer linii:</p>
+                <input type="text" class="text-input" id="lineNumber" placeholder="np. 10">
+            </div>
+            
+            <!-- Pole dla jednostek (miesięczne) -->
+            <div id="unitsSection" style="display: none;">
+                <div id="unitsInputs">
+                    <!-- Pola będą dodawane dynamicznie przez JS -->
+                </div>
+            </div>
+            
+            <!-- Datalist z podpowiedziami dla obszarów -->
+            <datalist id="unitSuggestions">
+                <option value="Obszar Gminy Klucze">
+                <option value="Obszar Miasta Bukowno i Gminy Bolesław">
+                <option value="Obszar Miasta Sławków">
+                <option value="Obszar Gminy Olkusz + Lgota">
+            </datalist>
+            
+            <div class="quantity-section">
+                <div class="quantity-left">
+                    <p class="card-label">ilość biletów:</p>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                </div>
+                <div class="quantity-right">
+                    <p class="card-label">opłata:</p>
+                    <p class="price" id="totalPrice">90.00 PLN</p>
+                </div>
+            </div>
+            
+            <p class="card-label">Imię i nazwisko:</p>
+            <p class="card-value" id="buyerName">Jakub Bujakiewicz</p>
+            
+            <p class="card-label">Ważny od:</p>
+            <div class="date-input-wrapper">
+                <input type="text" class="date-input" id="validFrom" value="01.10.2025">
+                <img src="images/calendar-icon.png" class="calendar-icon" alt="Kalendarz">
+            </div>
+        </div>
+
+        <button class="buy-button" id="buyButton">Skasuj bilet</button>
+    </div>
+    </div> <!-- close page-wrapper -->
+
+    <script src="assets/buy.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

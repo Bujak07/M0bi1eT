@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>moBiLet - Historia biletów</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/history.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="window.location.href='home.html'">← Wróć</button>
+            <img src="images/logo-white.png" class="header-logo" alt="moBiLet">
+        </div>
+        <p class="header-title">Historia biletów</p>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab" onclick="window.location.href='recent.html'">Ostatnie bilety</div>
+            <div class="tab active">Historia biletów</div>
+        </div>
+
+        <div class="filter-section">
+            <select class="filter-select" id="filterSelect">
+                <option value="all">Wszystkie bilety</option>
+                <option value="active">Tylko aktywne</option>
+                <option value="expired">Tylko wygasłe</option>
+            </select>
+        </div>
+
+        <div class="tickets-container" id="ticketsContainer">
+            <p class="no-tickets">Brak historii biletów</p>
+        </div>
+
+        <div class="stats-section">
+            <h3>Statystyki</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Liczba biletów</div>
+                    <div class="stat-value" id="totalTickets">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Wydano łącznie</div>
+                    <div class="stat-value" id="totalSpent">0 PLN</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/history.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

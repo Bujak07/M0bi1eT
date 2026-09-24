@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>moBiLET - Bilet</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/ticket.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="moBiLET">
+    <meta name="theme-color" content="#1162a4">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="page-wrapper">
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="window.location.href='home.html'">← Wróć</button>
+            <img src="images/logo-white.png" class="header-logo-center" alt="moBiLet">
+            <div class="header-spacer"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ticket-view">
+            <!-- Latające logo ZKG - górne -->
+            <div class="flying-logo-top">
+                <img src="images/zkg-logo.png" alt="ZKG" class="zkg-logo">
+            </div>
+
+            <!-- QR Code -->
+            <div class="qr-section">
+                <img src="images/qr-code.png" class="qr-code" alt="QR Code">
+            </div>
+
+            <!-- Informacje o bilecie -->
+            <div class="ticket-info">
+                <p class="info-label">Nazwa:</p>
+                <p class="info-value-big">ZKGKM Olkusz</p>
+
+                <p class="info-label">Bilet:</p>
+                <p class="info-value-big" id="ticketTypeName">MIESIĘCZNY 2 JEDN. ADM. U</p>
+
+                <!-- Pola dla biletów jednorazowych -->
+                <div id="oneTimeFields" style="display: none;">
+                    <p class="info-label">Nr linii:</p>
+                    <p class="info-value-big" id="lineNumberDisplay"></p>
+                </div>
+
+                <!-- Pola dla biletów miesięcznych -->
+                <div id="monthlyFields" style="display: none;">
+                    <p class="info-label">Dokument tożsamości:</p>
+                    <p class="info-value-big" id="idNumber">ABC123456</p>
+
+                    <p class="info-label">Ważny do:</p>
+                    <p class="info-value-big" id="validUntil">31.10.2025</p>
+                </div>
+
+                <p class="info-label">Numer bieżący:</p>
+                <p class="info-value-big" id="ticketNumber">123456789</p>
+
+                <!-- Pola dla biletów miesięcznych -->
+                <div id="monthlyFields2" style="display: none;">
+                    <p class="info-label">Imię i nazwisko:</p>
+                    <p class="info-value-big" id="ownerName">JAN KOWALSKI</p>
+
+                    <p class="info-label">Ważny od:</p>
+                    <p class="info-value-big" id="validFrom">01.10.2025</p>
+
+                    <div id="unitsArea">
+                        <!-- Pola jednostek będą dodawane dynamicznie przez JS -->
+                    </div>
+                </div>
+
+                <p class="info-label">Numer kontrolny:</p>
+                <p class="info-value-big" id="controlNumber">54321</p>
+            </div>
+
+            <!-- Latające logo ZKG - dolne -->
+            <div class="flying-logo-bottom">
+                <img src="images/zkg-logo.png" alt="ZKG" class="zkg-logo">
+            </div>
+
+            <!-- Cena i czas zakupu -->
+            <div class="ticket-footer">
+                <p class="info-label">Cena:</p>
+                <p class="info-value-big" id="ticketPrice">90.00 PLN</p>
+
+                <p class="info-label">Czas zakupu:</p>
+                <p class="info-value-big" id="purchaseTime">01.10.2025 14:44:11</p>
+            </div>
+        </div>
+    </div>
+    </div> <!-- close page-wrapper -->
+
+    <script src="assets/ticket.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

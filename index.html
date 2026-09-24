@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <title>moBiLET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="moBiLET">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1162a4">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="images/logo.png" class="logo" alt="moBiLet">
+        <img src="images/blik-logo.png" class="blik-logo" alt="BLIK">
+    </div>
+
+    <div class="guide-holder">
+        <div class="top-holder">
+            <p class="guide-title">Instrukcja instalacji</p>
+            <img class="arrow" src="https://i.imgur.com/aUZmu0W.png" alt="arrow">
+        </div>
+        <div class="guide-text">
+            <span style="font-size: 17px; font-weight: 500;">Dla systemu iOS:</span><br>
+            <ul>
+                <li>Upewnij się, że używasz przeglądarki Safari</li>
+                <li>Uzupełnij dane i kliknij "Dalej"</li>
+                <li>Naciśnij udostępnij → Do Ekranu głównego</li>
+            </ul>
+            <span style="font-size: 17px; font-weight: 500;">Dla systemu Android:</span>
+            <ul>
+                <li>Upewnij się, że używasz przeglądarki Google Chrome</li>
+                <li>Uzupełnij dane i kliknij "Dalej"</li>
+                <li>Naciśnij 3 kropki → Dodaj do ekranu głównego</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="input-holder">
+        <input type="text" id="name" class="input" placeholder="">
+        <span class="placeholder">Imię</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+ 
+    <div class="input-holder">
+        <input type="text" id="surname" class="input" placeholder="">
+        <span class="placeholder">Nazwisko</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input-holder">
+        <input type="text" id="idNumber" class="input" placeholder="">
+        <span class="placeholder">Numer dowodu osobistego</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <a class="go-button" id="goButton">Dalej</a>
+
+    <p class="disclaimer">⚠️ Ta aplikacja ma charakter humorystyczny i nie stanowi prawdziwego biletu komunikacji miejskiej. Używaj wyłącznie w celach rozrywkowych!</p>
+
+    <script src="assets/index.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

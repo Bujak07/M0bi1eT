@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>moBiLet - Olkusz ZKGKM</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/tickets.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="window.location.href='transport.html'">← Wróć</button>
+            <img src="images/logo-white.png" class="header-logo" alt="moBiLet">
+            <button class="next-btn">Dalej</button>
+        </div>
+        <p class="header-title">Olkusz ZKGKM</p>
+    </div>
+
+    <div class="container">
+        <!-- Główne menu -->
+        <div id="mainMenu">
+            <div class="ticket-option" onclick="showSection('jednorazowe')">
+                <p class="ticket-name">bilety jednorazowe</p>
+            </div>
+            <div class="ticket-option" onclick="showSection('miesieczne')">
+                <p class="ticket-name">bilety miesięczne imienne</p>
+            </div>
+        </div>
+
+        <!-- Widok: bilety jednorazowe -->
+        <div id="jednorazowe" style="display: none;">
+            <div class="ticket-option" onclick="showSubSection('jednorazowe-miasto')">
+                <p class="ticket-name">miasto</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('jednorazowe-1jednostka')">
+                <p class="ticket-name">1 jednostka adm.</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('jednorazowe-2lub3jednostki')">
+                <p class="ticket-name">2 lub 3 jednostki adm.</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('jednorazowe-inne')">
+                <p class="ticket-name">inne</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: jednorazowe - miasto -->
+        <div id="jednorazowe-miasto" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', 'MiastoOlkuszN', 3.00, 'Miasto Olkusz N')">
+                <p class="ticket-name">Miasto Olkusz N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">3.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', 'MiastoOlkuszUgminny', 2.00, 'Miasto Olkusz U gminny')">
+                <p class="ticket-name">Miasto Olkusz U gminny</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">2.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', 'MiastoOlkuszUustawowy', 1.50, 'Miasto Olkusz U ustawowy')">
+                <p class="ticket-name">Miasto Olkusz U ustawowy</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">1.50 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: jednorazowe - 1 jednostka adm. -->
+        <div id="jednorazowe-1jednostka" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '1jednAdmN', 4.00, '1 jedn. adm. N')">
+                <p class="ticket-name">1 jedn. adm. N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">4.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '1jednAdmUgminny', 3.00, '1 jedn. adm. U gminny')">
+                <p class="ticket-name">1 jedn. adm. U gminny</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">3.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '1jednAdmUustawowy', 2.00, '1 jedn. adm. U ustawowy')">
+                <p class="ticket-name">1 jedn. adm. U ustawowy</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">2.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: jednorazowe - 2 lub 3 jednostki adm. -->
+        <div id="jednorazowe-2lub3jednostki" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '2lub3jednAdmN', 5.00, '2 lub 3 jedn. adm. N')">
+                <p class="ticket-name">2 lub 3 jedn. adm. N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">5.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '2lub3jednAdmUgminny', 4.00, '2 lub 3 jedn. adm. U gminny')">
+                <p class="ticket-name">2 lub 3 jedn. adm. U gminny</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">4.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', '2lub3jednAdmUustawowy', 2.50, '2 lub 3 jedn. adm. U ustawo...')">
+                <p class="ticket-name">2 lub 3 jedn. adm. U ustawo...</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">2.50 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: jednorazowe - inne -->
+        <div id="jednorazowe-inne" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('jednorazowe', 'Przewoz', 4.00, 'Przewóz bagażu, roweru lub...')">
+                <p class="ticket-name">Przewóz bagażu, roweru lub...</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">4.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Widok: bilety miesięczne imienne -->
+        <div id="miesieczne" style="display: none;">
+            <div class="ticket-option" onclick="showSubSection('miesieczne-miasto')">
+                <p class="ticket-name">miasto</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('miesieczne-1jednostka')">
+                <p class="ticket-name">1 jednostka adm.</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('miesieczne-2jednostki')">
+                <p class="ticket-name">2 jednostki adm.</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('miesieczne-3jednostki')">
+                <p class="ticket-name">3 jednostki adm.</p>
+            </div>
+            <div class="ticket-option" onclick="showSubSection('miesieczne-wszystkie')">
+                <p class="ticket-name">wszystkie linie</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: miesięczne - miasto -->
+        <div id="miesieczne-miasto" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('miesieczne', 'MiesiecznyMiastoOlkuszN', 80, 'Miesięczny Miasto Olkusz N')">
+                <p class="ticket-name">Miesięczny Miasto Olkusz N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">80.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('miesieczne', 'MiesiecznyMiastoOlkuszU', 40, 'Miesięczny Miasto Olkusz U')">
+                <p class="ticket-name">Miesięczny Miasto Olkusz U</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">40.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: miesięczne - 1 jednostka adm. -->
+        <div id="miesieczne-1jednostka" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '1jednostka', 116, 'Miesięczny 1 jedn. adm. N')">
+                <p class="ticket-name">Miesięczny 1 jedn. adm. N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">116.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '1jednostka', 58, 'Miesięczny 1 jedn. adm. U')">
+                <p class="ticket-name">Miesięczny 1 jedn. adm. U</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">58.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: miesięczne - 2 jednostki adm. -->
+        <div id="miesieczne-2jednostki" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '2jednostki', 140, 'Miesięczny 2 jedn. adm. N')">
+                <p class="ticket-name">Miesięczny 2 jedn. adm. N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">140.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '2jednostki', 70, 'Miesięczny 2 jedn. adm. U')">
+                <p class="ticket-name">Miesięczny 2 jedn. adm. U</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">70.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: miesięczne - 3 jednostki adm. -->
+        <div id="miesieczne-3jednostki" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '3jednostki', 160, 'Miesięczny 3 jedn. adm. N')">
+                <p class="ticket-name">Miesięczny 3 jedn. adm. N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">160.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('miesieczne', '3jednostki', 80, 'Miesięczny 3 jedn. adm. U')">
+                <p class="ticket-name">Miesięczny 3 jedn. adm. U</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">80.00 PLN</p>
+            </div>
+        </div>
+
+        <!-- Podwidok: miesięczne - wszystkie linie -->
+        <div id="miesieczne-wszystkie" style="display: none;">
+            <div class="ticket-option" onclick="selectTicket('miesieczne', 'wszystkie', 180, 'Miesięczny wsz.linie N')">
+                <p class="ticket-name">Miesięczny wsz.linie N</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">180.00 PLN</p>
+            </div>
+            <div class="ticket-option" onclick="selectTicket('miesieczne', 'wszystkie', 90, 'Miesięczny wsz.linie U')">
+                <p class="ticket-name">Miesięczny wsz.linie U</p>
+                <p class="ticket-subtitle">Olkusz ZKGKM</p>
+                <p class="ticket-price">90.00 PLN</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/tickets.js"></script>
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

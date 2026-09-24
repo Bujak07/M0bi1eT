@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.page-wrapper {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu boczne */
+.side-menu {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-header {
+    background-color: #1162a4;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu-close {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-items {
+    padding: 0;
+    flex: 1;
+    background-image: url('../images/menu-tlo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-item {
+    padding: 15px 20px;
+    background-color: #7f7f7f;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+.menu-item:hover {
+    background-color: #6a6a6a;
+}
+
+.menu-item.active {
+    background-color: #bf0007;
+    color: white;
+}
+
+.menu-item-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.menu-item span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.menu-item-subtitle {
+    font-size: 12px;
+    color: #ddd;
+    margin: 5px 0 0 0;
+}
+
+.menu-divider {
+    height: 10px;
+    background-color: transparent;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1162a4;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.logout-btn:hover {
+    background-color: #0d4f87;
+}
+
+.header {
+    background-color: #1162a4;
+    padding: 20px 0 0 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.menu-icon, .star-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.balance-container {
+    padding: 8px 20px 14px;
+}
+
+.balance-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.balance-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance-amount {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.balance-refresh {
+    font-size: 28px;
+    color: white;
+    opacity: 0.85;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.4s ease;
+}
+
+.balance-refresh.spin {
+    transform: rotate(-360deg);
+}
+
+.balance-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 2px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+}
+
+.tile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex: 1;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.tile {
+    background-color: #bf0007;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.tile:active {
+    transform: scale(0.98);
+}
+
+.tile-icon {
+    width: 80px;
+    height: auto;
+    max-height: 80px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.tile-text {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 400;
+}

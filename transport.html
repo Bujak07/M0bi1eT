@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>moBiLet - Komunikacja miejska</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/transport.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="window.location.href='home.html'">← Wróć</button>
+            <img src="images/logo-white.png" class="header-logo-center" alt="moBiLet">
+            <div class="header-spacer"></div>
+        </div>
+        <p class="header-title">Komunikacja miejska</p>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active">Komunikacja miejska</div>
+        <div class="tab" onclick="window.location.href='history.html'">Historia biletów</div>
+    </div>
+
+    <div class="container">
+        <div class="operator-card" onclick="window.location.href='tickets.html'">
+            <div class="operator-icon-wrapper">
+                <img src="images/bus-icon.png" class="operator-icon" alt="Bus">
+            </div>
+            <p class="operator-name">Olkusz ZKGKM</p>
+        </div>
+    </div>
+
+    <script src="assets/manifest.js"></script>
+</body>
+</html>

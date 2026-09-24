@@ -1,0 +1,24 @@
+{
+  "name": "moBiLET",
+  "short_name": "moBiLET",
+  "description": "Aplikacja do zakupu biletów komunikacji miejskiej",
+  "start_url": "/mobilet-app-bujak/",
+  "display": "standalone",
+  "background_color": "#1162a4",
+  "theme_color": "#1162a4",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/mobilet-app-bujak/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/mobilet-app-bujak/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
